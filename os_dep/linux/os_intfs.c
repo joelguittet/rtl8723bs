@@ -413,6 +413,10 @@ module_param(rtw_decrypt_phy_file, int, 0644);
 MODULE_PARM_DESC(rtw_decrypt_phy_file,"Enable Decrypt PHY File");
 #endif
 
+int rtw_debug_level = _drv_err_;
+module_param(rtw_debug_level, int, 0644);
+MODULE_PARM_DESC(rtw_debug_level,"Set Driver Debug Verbosity");
+
 static uint loadparam(PADAPTER padapter, _nic_hdl pnetdev);
 int _netdev_open(struct net_device *pnetdev);
 int netdev_open (struct net_device *pnetdev);
@@ -603,6 +607,8 @@ _func_enter_;
 
 	registry_par->boffefusemask = (u8)rtw_OffEfuseMask;
 	registry_par->bFileMaskEfuse = (u8)rtw_FileMaskEfuse;
+
+	GlobalDebugLevel = rtw_debug_level;
 _func_exit_;
 
 	return status;
