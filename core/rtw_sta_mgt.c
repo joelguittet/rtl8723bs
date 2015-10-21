@@ -363,6 +363,7 @@ _func_enter_;
 
 		if(index >= NUM_STA){
 			RT_TRACE(_module_rtl871x_sta_mgt_c_,_drv_err_,("ERROR=> rtw_alloc_stainfo: index >= NUM_STA"));
+			_exit_critical_bh(&(pstapriv->sta_hash_lock), &irqL2);
 			psta= NULL;	
 			goto exit;
 		}
@@ -429,6 +430,7 @@ _func_enter_;
 		/* init for the sequence number of received management frame */
 		psta->RxMgmtFrameSeqNum = 0xffff;
 
+		_exit_critical_bh(&(pstapriv->sta_hash_lock), &irqL2);
 		//alloc mac id for non-bc/mc station,
 		rtw_alloc_macid(pstapriv->padapter, psta);
 
@@ -436,7 +438,6 @@ _func_enter_;
 	
 exit:
 
-	_exit_critical_bh(&(pstapriv->sta_hash_lock), &irqL2);
 
 _func_exit_;
 
