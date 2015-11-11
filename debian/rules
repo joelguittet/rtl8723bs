@@ -17,20 +17,18 @@ dkms_target     := usr/src/$(source_name)-$(version)
 
 install-dkms:
 	dh_installdirs -p $(dkms_package) $(dkms_target)
-	dh_install -p $(dkms_package) $(dkms_target)/
 
 install-source:
 	dh_installdirs -p $(source_package) $(source_target)
-	dh_install -p $(source_package) README.txt $(source_target)/
 	
 	# Copy Debian files
 	install -D -m 0755 debian/rules.modules $(source_debdir)/rules
-	for file in changelog compat control control.modules.in copyright; do \
+	for file in changelog compat control control.modules.in; do \
 		install -m 644 debian/$$file $(source_debdir); \
 	done
 	
 	# Make suitable tarball for module-assisant and kernel-package
-	cd debian/$(source_package)/usr/src && tar cfJ $(source_name).tar.xz modules && rm -rf modules
+	#cd debian/$(source_package)/usr/src && tar cfJ $(source_name).tar.xz modules && rm -rf modules
 
 override_dh_install: install-dkms install-source
 
