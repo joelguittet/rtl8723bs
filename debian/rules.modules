@@ -20,7 +20,7 @@ binary-modules: kdist_config
 	dh_testroot
 	dh_prep
 	# Build and install the module
-	$(MAKE) KSRC=$(KSRC) USER_EXTRA_CFLAGS=$(USER_EXTRA_CFLAGS) modules
+	$(MAKE) KSRC=$(KSRC) USER_EXTRA_CFLAGS="$(USER_EXTRA_CFLAGS)" modules
 	# Install the module
 	$(MAKE) KSRC=$(KSRC) PREFIX=$(CURDIR)/debian/$(PKGNAME)-$(KVERS) modules_install
 	dh_installdocs
