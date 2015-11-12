@@ -3,27 +3,19 @@ Date: Wed, 11 Nov 2015 13:13:04 -0800
 Subject: compilation_fixes.patch
 
 ---
- Makefile                   |  6 +++++-
+ Makefile                   |  5 ++++-
  hal/hal_btcoex.c           |  6 +++---
  hal/hal_com.c              |  2 +-
  hal/hal_com_phycfg.c       | 42 +++++++++++++++++++++---------------------
  include/hal_com.h          |  2 +-
  os_dep/linux/rtw_android.c |  2 +-
- 6 files changed, 32 insertions(+), 28 deletions(-)
+ 6 files changed, 31 insertions(+), 28 deletions(-)
 
 diff --git a/Makefile b/Makefile
-index a49dfea..f1437d2 100644
+index d7eab0e..f1437d2 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -13,6 +13,7 @@ EXTRA_CFLAGS += -Wno-unused-label
- EXTRA_CFLAGS += -Wno-unused-parameter
- EXTRA_CFLAGS += -Wno-unused-function
- EXTRA_CFLAGS += -Wno-unused
-+EXTRA_CFLAGS += -Wno-error=date-time
- 
- #EXTRA_CFLAGS += -Wno-uninitialized
- 
-@@ -1492,12 +1493,15 @@ all: modules
+@@ -1493,12 +1493,15 @@ all: modules
  modules:
  	$(MAKE) ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) -C $(KSRC) M=$(shell pwd)  modules
  
