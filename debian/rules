@@ -29,6 +29,7 @@ install-source:
 	dh_install -p $(source_package) include $(source_target)
 	dh_install -p $(source_package) Makefile $(source_target)
 	dh_install -p $(source_package) platform $(source_target)
+	#dh_install -p $(source_package) debian/patches $(source_target)/debian
 	
 	# Copy Debian files
 	install -D -m 0755 debian/rules.modules $(source_debdir)/rules
