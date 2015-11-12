@@ -3,3 +3,4 @@
 0003-rtl8723bs-add-debug-level-modparam.patch
 0004-debug-match-4.3-kernel-seq_printf-api.patch
 0005-rtl8723bs_mp_driver-port-vendor-events-to-include-wd.patch
+0006-LOCAL-fix-my-ubuntu-x86-builds.patch
