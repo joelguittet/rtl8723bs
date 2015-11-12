@@ -22,7 +22,8 @@ binary-modules: kdist_config
 	# Build and install the module
 	$(MAKE) KSRC=$(KSRC) USER_EXTRA_CFLAGS="$(USER_EXTRA_CFLAGS)" modules
 	# Install the module
-	$(MAKE) KSRC=$(KSRC) PREFIX=$(CURDIR)/debian/$(PKGNAME)-$(KVERS) modules_install
+	$(MAKE) KSRC=$(KSRC) PREFIX=$(CURDIR)/debian/$(PKGNAME) modules_install
+	rm -f PREFIX=$(CURDIR)/debian/$(PKGNAME)/lib/modules/$(KVERS)/m*
 	dh_installdocs
 	dh_installchangelogs
 	dh_installmodules
