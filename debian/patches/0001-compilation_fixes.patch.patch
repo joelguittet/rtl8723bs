@@ -12,10 +12,10 @@ Subject: compilation_fixes.patch
  6 files changed, 31 insertions(+), 28 deletions(-)
 
 diff --git a/Makefile b/Makefile
-index d7eab0e..f1437d2 100644
+index a49dfea..eb58663 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -1493,12 +1493,15 @@ all: modules
+@@ -1492,12 +1492,15 @@ all: modules
  modules:
  	$(MAKE) ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) -C $(KSRC) M=$(shell pwd)  modules
  

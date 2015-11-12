@@ -1,0 +1,20 @@
+From: Jason Abele <jason.abele@gmail.com>
+Date: Thu, 12 Nov 2015 11:56:48 -0800
+Subject: avoid date-time warn/error with ARM
+
+---
+ Makefile | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/Makefile b/Makefile
+index eb58663..f1437d2 100644
+--- a/Makefile
++++ b/Makefile
+@@ -13,6 +13,7 @@ EXTRA_CFLAGS += -Wno-unused-label
+ EXTRA_CFLAGS += -Wno-unused-parameter
+ EXTRA_CFLAGS += -Wno-unused-function
+ EXTRA_CFLAGS += -Wno-unused
++EXTRA_CFLAGS += -Wno-error=date-time
+ 
+ #EXTRA_CFLAGS += -Wno-uninitialized
+ 
