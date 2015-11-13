@@ -1,3 +1,10 @@
+rtl8723bs-mp-driver (4.3.16-13854.20150410-BTCOEX20150119-5844-ntc1) trusty; urgency=medium
+
+  * avoid-date-time-warn-error-with-ARM
+  * pickup fixes from fcc/ce testing
+
+ -- Jason Abele <jason@nextthing.com>  Thu, 12 Nov 2015 17:24:01 -0800
+
 rtl8723bs-mp-driver (4.3.16-13854.20150410-BTCOEX20150119-5844-ntc) unstable; urgency=low
 
   * First release
