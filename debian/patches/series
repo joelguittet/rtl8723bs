@@ -5,3 +5,5 @@
 0005-rtl8723bs_mp_driver-port-vendor-events-to-include-wd.patch
 0006-rtl8723bs_mp_driver-cfg80211_disconnected.patch
 0007-avoid-date-time-warn-error-with-ARM.patch
+0008-rtl8723bs_mp_driver-Fix-failure-to-start-transmit.patch
+0009-rtl8723bs_mp_driver-enable-adaptivity-for-ETSI-CE-ma.patch
