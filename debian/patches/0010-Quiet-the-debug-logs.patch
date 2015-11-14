@@ -1,0 +1,36 @@
+From: Jason Abele <jason.abele@gmail.com>
+Date: Fri, 13 Nov 2015 20:35:33 -0800
+Subject: Quiet the debug logs
+
+---
+ include/autoconf.h  | 2 +-
+ include/rtw_debug.h | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/include/autoconf.h b/include/autoconf.h
+index 5d0d175..1667141 100644
+--- a/include/autoconf.h
++++ b/include/autoconf.h
+@@ -309,8 +309,8 @@
+ 
+ /*
+  * Debug Related Config
+- */
+ #define CONFIG_DEBUG
++ */
+ 
+ #ifdef CONFIG_DEBUG
+ #define DBG	1	// for ODM & BTCOEX debug
+diff --git a/include/rtw_debug.h b/include/rtw_debug.h
+index f6168a3..3324a72 100644
+--- a/include/rtw_debug.h
++++ b/include/rtw_debug.h
+@@ -21,7 +21,7 @@
+ #define __RTW_DEBUG_H__
+ 
+ 
+-#define _drv_always_		1
++#define _drv_always_		6
+ #define _drv_emerg_			2
+ #define _drv_alert_			3
+ #define _drv_crit_			4

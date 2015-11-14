@@ -7,3 +7,4 @@
 0007-avoid-date-time-warn-error-with-ARM.patch
 0008-rtl8723bs_mp_driver-Fix-failure-to-start-transmit.patch
 0009-rtl8723bs_mp_driver-enable-adaptivity-for-ETSI-CE-ma.patch
+0010-Quiet-the-debug-logs.patch
