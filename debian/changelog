@@ -1,3 +1,9 @@
+rtl8723bs-mp-driver (4.4.2-17831.20160519-BTCOEX20151223-654a-ntc-1) stable; urgency=medium
+
+  * Prepare release v4.4.2_17831.20160519_BTCOEX20151223-654a
+
+ -- Jason Abele <jason@nextthing.co>  Wed, 14 Dec 2016 15:30:09 -0800
+
 rtl8723bs-mp-driver (4.3.16-13854.20150410-BTCOEX20150119-5844-ntc-2) stable; urgency=low
 
   * Quiet debug logging
